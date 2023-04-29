@@ -43,7 +43,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "users.apps.UserConfig",
+    "dashboard.apps.DashboardConfig",
     "social_django",
+    "dropoff_locator",
+    "acceptor.apps.AcceptorConfig",
 ]
 
 MIDDLEWARE = [
@@ -120,7 +123,7 @@ AUTHENTICATION_BACKENDS = (
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "EST"
 
 USE_I18N = True
 
@@ -133,6 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
